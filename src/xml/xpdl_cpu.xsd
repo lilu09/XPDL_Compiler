@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.xpdl.com/xpdl_cpu" xmlns:tns="http://www.xpdl.com/xpdl_cpu" elementFormDefault="qualified">
+
+    <element name="model" type="tns:model_type"></element>
+    
+    <complexType name="model_type">
+    	<sequence>
+    		<element name="component" type="tns:component_type" maxOccurs="1" minOccurs="1"></element>
+    		<element name="cpu" type="tns:cpu_type" maxOccurs="1" minOccurs="1"></element>
+
+    	</sequence>
+    </complexType>
+
+    <complexType name="cpu_type">
+    	<sequence>
+    		<element name="group" type="tns:group_type"
+    			maxOccurs="unbounded" minOccurs="0">
+    		</element>
+    		<element name="cache" type="tns:cache_type"
+    			maxOccurs="unbounded" minOccurs="0">
+    		</element>
+    		<element name="core" type="tns:core_type"
+    			maxOccurs="unbounded" minOccurs="0">
+    		</element>
+    		<element name="power_model" type="tns:power_model_type"
+    			maxOccurs="unbounded" minOccurs="1">
+    		</element>
+    	</sequence>
+    	<attribute name="name" type="string"></attribute>
+    	<attribute name="type" type="string"></attribute>
+    	<attribute name="num_of_cores" type="int"></attribute>
+    	<attribute name="num_of_threads" type="int"></attribute>
+    </complexType>
+
+    <complexType name="group_type">
+    	<sequence>
+    		<element name="group" type="tns:group_type" maxOccurs="unbounded" minOccurs="0"></element>
+    		<element name="core" type="tns:core_type" maxOccurs="unbounded" minOccurs="0"></element>
+    		<element name="cache" type="tns:cache_type" maxOccurs="unbounded" minOccurs="0"></element>
+    	</sequence>
+    	<attribute name="prefix" type="string"></attribute>
+    	<attribute name="quantity" type="int"></attribute>
+    </complexType>
+
+
+    <complexType name="cache_type">
+    	<attribute name="name" type="string"></attribute>
+    	<attribute name="size" type="int"></attribute>
+    	<attribute name="unit" type="string"></attribute>
+    	<attribute name="set" type="int"></attribute>
+    </complexType>
+
+    <complexType name="core_type">
+    	<attribute name="frequency" type="double"></attribute>
+    	<attribute name="unit" type="string"></attribute>
+    </complexType>
+
+    <complexType name="power_model_type">
+    	<attribute name="type" type="string"></attribute>
+    </complexType>
+
+    <complexType name="component_type">
+    	<attribute name="type" type="string"></attribute>
+    </complexType>
+</schema>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.xpdl.com/xpdl_interconnect" xmlns:tns="http://www.xpdl.com/xpdl_interconnect" elementFormDefault="qualified">
+
+    
+
+    <element name="model" type="tns:model_type"></element>
+    
+    <complexType name="model_type">
+    	<sequence>
+    		<element name="component" type="tns:component_type" maxOccurs="1" minOccurs="1"></element>
+    		<element name="interconnect" type="tns:interconnect_type" maxOccurs="unbounded" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="component_type">
+    	<attribute name="type" type="string"></attribute>
+    </complexType>
+    
+    <complexType name="interconnect_type">
+    	<sequence>
+    		<element name="channel" type="tns:channel_type"
+    			maxOccurs="unbounded" minOccurs="1">
+    		</element>
+    	</sequence>
+    	<attribute name="name" type="string"></attribute>
+    	<attribute name="head" type="string"></attribute>
+    	<attribute name="tail" type="string"></attribute>
+    </complexType>
+
+    <complexType name="channel_type">
+    	<attribute name="name" type="string"></attribute>
+    	<attribute name="max_bandwith" type="double"></attribute>
+    	<attribute name="max_bandwith_unit" type="string"></attribute>
+    	<attribute name="energy_per_byte" type="double"></attribute>
+    	<attribute name="energy_per_byte_unit" type="string"></attribute>
+    </complexType>
+</schema>

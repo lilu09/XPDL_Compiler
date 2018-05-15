@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.xpdl.com/xpdl_gpu" xmlns:tns="http://www.xpdl.com/xpdl_gpu" elementFormDefault="qualified">
+
+    <element name="model" type="tns:model_type"></element>
+    
+    <complexType name="model_type">
+    	<sequence>
+    		<element name="component" type="tns:component_type"
+    			maxOccurs="1" minOccurs="1">
+    		</element>
+    		<element name="gpu" type="tns:gpu_type"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="component_type">
+    	<attribute name="type" type="string"></attribute>
+    </complexType>
+
+    <complexType name="gpu_type">
+    	<sequence>
+    		<element name="group" type="tns:group_type" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    		<element name="memory" type="tns:memory_type" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    		<element name="cache" type="tns:cache_type" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    	</sequence>
+    	<attribute name="type" type="string"></attribute>
+    	<attribute name="name" type="string"></attribute>
+    	<attribute name="programming_model" type="string"></attribute>
+    	<attribute name="compiler" type="string"></attribute>
+    	<attribute name="compute_capability" type="double"></attribute>
+    	<attribute name="max_dim_thread_block_x" type="int"></attribute>
+    	<attribute name="max_dim_thread_block_y" type="int"></attribute>
+    	<attribute name="max_dim_thread_block_z" type="int"></attribute>
+    	<attribute name="max_dim_grid_size_x" type="int"></attribute>
+    	<attribute name="max_dim_grid_size_y" type="int"></attribute>
+    	<attribute name="max_dim_grid_size_z" type="int"></attribute>
+    	<attribute name="max_threads_per_block" type="int"></attribute>
+    	<attribute name="num_of_cores" type="int"></attribute>
+    </complexType>
+
+    <complexType name="group_type">
+    	<sequence>
+    		<element name="group" type="tns:group_type"
+    			maxOccurs="unbounded" minOccurs="0">
+    		</element>
+    		<element name="core" type="tns:core_type"
+    			maxOccurs="unbounded" minOccurs="0">
+    		</element>
+    		<element name="memory" type="tns:memory_type"
+    			maxOccurs="unbounded" minOccurs="0">
+    		</element>
+    		<element name="cache" type="tns:cache_type"
+    			maxOccurs="unbounded" minOccurs="0">
+    		</element>
+    	</sequence>
+    	<attribute name="name" type="string"></attribute>
+    	<attribute name="quantity" type="string"></attribute>
+    </complexType>
+
+    <complexType name="core_type">
+    	<attribute name="frequency" type="string"></attribute>
+    	<attribute name="frequency_unit" type="string"></attribute>
+    </complexType>
+
+    <complexType name="memory_type">
+    	<attribute name="name" type="string"></attribute>
+    	<attribute name="size" type="string"></attribute>
+    	<attribute name="unit" type="string"></attribute>
+    </complexType>
+
+    <complexType name="cache_type">
+    	<attribute name="name" type="string"></attribute>
+    	<attribute name="size" type="string"></attribute>
+    	<attribute name="unit" type="string"></attribute>
+    </complexType>
+
+    <complexType name="programming_model_type">
+    	<attribute name="NewAttribute" type="string"></attribute>
+    </complexType>
+</schema>

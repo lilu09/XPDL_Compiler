@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.xpdl.com/system" xmlns:tns="http://www.xpdl.com/system" elementFormDefault="qualified">
+
+    <element name="model" type="tns:model"></element>
+    
+    <complexType name="model">
+    	<sequence>
+    		<element name="component" type="tns:component_type"
+    			maxOccurs="1" minOccurs="1">
+    		</element>
+    		<element name="cpu" type="tns:cpu_type"
+    			maxOccurs="unbounded" minOccurs="0">
+    		</element>
+    		<element name="gpu" type="tns:gpu_type"
+    			maxOccurs="unbounded" minOccurs="0">
+    		</element>
+    		<element name="memory" type="tns:memory_type"
+    			maxOccurs="unbounded" minOccurs="0">
+    		</element>
+    		<element name="software" type="tns:software_type"
+    			maxOccurs="unbounded" minOccurs="0">
+    		</element>
+    		<element name="interconnect" type="tns:interconnect_type"
+    			maxOccurs="unbounded" minOccurs="0">
+    		</element>
+    		<element name="library" type="tns:software_type" maxOccurs="unbounded" minOccurs="0"></element>
+    		<element name="os" type="tns:software_type" maxOccurs="unbounded" minOccurs="0"></element>
+    	</sequence>
+
+    </complexType>
+    
+    <complexType name="component_type">
+    	<attribute name="type" type="string"></attribute>
+    </complexType>
+
+    <complexType name="cpu_type">
+    	<attribute name="type" type="string"></attribute>
+    	<attribute name="id" type="string"></attribute>
+    </complexType>
+
+    <complexType name="gpu_type">
+    	<attribute name="type" type="string"></attribute>
+    	<attribute name="id" type="string"></attribute>
+    </complexType>
+
+    <complexType name="memory_type">
+    	<attribute name="type" type="string"></attribute>
+    	<attribute name="id" type="string"></attribute>
+    </complexType>
+
+    <complexType name="software_type">
+    	<attribute name="type" type="string"></attribute>
+    	<attribute name="id" type="string"></attribute>
+    </complexType>
+
+    <complexType name="interconnect_type">
+    	<attribute name="type" type="string"></attribute>
+    	<attribute name="id" type="string"></attribute>
+    	<attribute name="head" type="string"></attribute>
+    	<attribute name="tail" type="string"></attribute>
+    </complexType>
+</schema>

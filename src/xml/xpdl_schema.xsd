@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.xpdl.com/xpdl_schema" xmlns:tns="http://www.xpdl.com/xpdl_schema" elementFormDefault="qualified">
+
+<import namespace="http://www.xpdl.com/system" schemaLocation="system.xsd"/>
+<import namespace="http://www.xpdl.com/xpdl_cpu" schemaLocation="xpdl_cpu.xsd"/>
+<import namespace="http://www.xpdl.com/xpdl_memory" schemaLocation="xpdl_memory.xsd"/>
+<import namespace="http://www.xpdl.com/xpdl_gpu" schemaLocation="xpdl_gpu.xsd"/>
+<import namespace="http://www.xpdl.com/xpdl_interconnect" schemaLocation="xpdl_interconnect.xsd"/>
+<import namespace="http://www.xpdl.com/xpdl_software" schemaLocation="xpdl_software.xsd"/>
+
+</schema>

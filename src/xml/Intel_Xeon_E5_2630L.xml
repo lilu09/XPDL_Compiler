@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xpdl:model xmlns:xpdl="http://www.xpdl.com/xpdl_cpu" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xpdl.com/xpdl_cpu xpdl_cpu.xsd ">
+  <xpdl:component type="cpu" />
+  <xpdl:cpu name="Intel_Xeon_E5_2630L" num_of_cores="4"
+  	num_of_threads="8">
+  	<xpdl:group prefix="core_group" quantity="2">
+  		<xpdl:group prefix="core_in_group" quantity="2">
+  			<xpdl:core frequency="2" unit="GHz" />
+  			<xpdl:cache name="L1" size="32" unit="KiB" set="4" />
+  		</xpdl:group>
+  		<xpdl:cache name="L2" size="256" unit="KiB" set="2" />
+  	</xpdl:group>
+  	<xpdl:cache name="L3" size="15" unit="MiB" set="1" />
+  	<xpdl:power_model type="power_model_E5_2630L"></xpdl:power_model>
+  </xpdl:cpu>
+</xpdl:model>

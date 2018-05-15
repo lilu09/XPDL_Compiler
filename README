@@ -1,0 +1,38 @@
+Important notice:
+
+* If you use XPDL prototype, please cite the following paper:
+
+	Christoph Kessler, Lu Li, Aras Atalar, Alin Dobre:
+	XPDL: Extensible Platform Description Language to Support Energy Modeling and Optimization.
+	Proc. 44th International Conference on Parallel Processing Workshops, ICPP-EMS Embedded Multicore Systems, 
+	in conjunction with ICPP-2015, Beijing, 1-4 sep. 2015, pp. 51-60, IEEE. DOI 10.1109/ICPPW.2015.17
+
+* For the license, please see the attached LICENSE file.
+
+* Contact information: 
+	Christoph Kessler: christoph.kessler@liu.se
+	Lu Li: lu.li@liu.se
+
+------------------------------------------------------------------------------------------------------------------
+
+Installation:
+
+1. Install xerces 
+	https://xerces.apache.org/xerces-c/
+
+2. add YOUR_XERCES_DIRECTORY/lib to LD_LIBRARY_PATH
+
+3. add the following line to .bashrc with XPDL_HOME set to be the root folder of XPDL software
+
+	export XPDL_HOME=/home/lu/Documents/Software/10.XPDL/xpdl_project
+	export PATH=$XPDL_HOME/bin:$PATH
+
+4. go to src/
+
+5. change the xerces installation directory in Makefile
+
+6. make
+
+7. make run
+	Compile the xpdl file in the XPDL example folder
+	This will also open the xpdl_compiler generated hpp file directly

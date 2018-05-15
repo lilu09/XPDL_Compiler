@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xpdl:model xmlns:xpdl="http://www.xpdl.com/system" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xpdl.com/system system.xsd">
+	<xpdl:component type="system"/>
+	<xpdl:cpu id="xpdl_cpu_0" type="Intel_Xeon_E5_2630L"/>
+	<xpdl:cpu id="xpdl_cpu_1" type="Intel_Xeon_E5_2630L"/>
+	<xpdl:gpu id="xpdl_gpu_0" type="Nvidia_K20c"/>
+	<xpdl:gpu id="xpdl_gpu_1" type="Nvidia_K20c"/>
+	<xpdl:memory id="xpdl_mem00" type="DDR3_8G" />
+	<xpdl:memory id="xpdl_mem01" type="DDR3_16G" ></xpdl:memory>
+	<xpdl:software id="xpdl_matlab" type="matlab"></xpdl:software>
+	<xpdl:interconnect id="xpdl_interconnect" type="pcie3" head="xpdl_cpu_0" tail="xpdl_gpu_0" />
+	<xpdl:library id="xpdl_blas" type="blas" />
+	<xpdl:library id="xpdl_cublas" type="cublas" />
+	<xpdl:os id="xpdl_ubuntu" type="ubuntu" />
+</xpdl:model>

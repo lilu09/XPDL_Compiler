@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xpdl:model xmlns:xpdl="http://www.xpdl.com/xpdl_gpu" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xpdl.com/xpdl_gpu xpdl_gpu.xsd ">
+  <xpdl:component type="nvidia_gpu" />
+  <xpdl:gpu name="Nvidia_K20c" compute_capability="3.52"
+  	max_dim_grid_size_x="2147483647" max_dim_grid_size_y="65535"
+  	max_dim_grid_size_z="65535" max_dim_thread_block_x="1024"
+  	max_dim_thread_block_y="1024" max_dim_thread_block_z="64"
+  	max_threads_per_block="1024" type="nvidia_gpu" num_of_cores="2496">
+  	<xpdl:group name="SMs" quantity="13">
+  		<xpdl:group name="SM" quantity="192">
+  			<xpdl:core frequency="0.706" frequency_unit="GHz"></xpdl:core>
+  			<xpdl:memory name="Shared_per_block" size="49152"
+  				unit="bytes" ></xpdl:memory>
+  		</xpdl:group>
+  		<xpdl:cache name="L1_per_SMs" size="64" unit="KiB"></xpdl:cache>
+  	</xpdl:group>
+  	<xpdl:memory name="Global" size="5120" unit="MiB"></xpdl:memory>
+  	<xpdl:cache name="L2_shared" size="768" unit="KiB"></xpdl:cache>
+  </xpdl:gpu>
+</xpdl:model>

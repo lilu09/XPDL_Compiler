@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xpdl:model xmlns:xpdl="http://www.xpdl.com/xpdl_interconnect" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xpdl.com/xpdl_interconnect xpdl_interconnect.xsd ">
+  <xpdl:component type="interconnect" />
+  <xpdl:interconnect name="pcie3">
+  	<xpdl:channel name="up_link" max_bandwith="2"
+  		max_bandwith_unit="GiB" energy_per_byte="35"
+  		energy_per_byte_unit="nJ"></xpdl:channel>
+  	<xpdl:channel name="down_link" max_bandwith="4.5"
+  		max_bandwith_unit="GiB" energy_per_byte="15"
+  		energy_per_byte_unit="nJ"></xpdl:channel>
+  </xpdl:interconnect>
+</xpdl:model>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.xpdl.com/xpdl_memory" xmlns:tns="http://www.xpdl.com/xpdl_memory" elementFormDefault="qualified">
+
+    <element name="model" type="tns:model_type"></element>
+    
+    <complexType name="model_type">
+    	<sequence>
+    		<element name="component" type="tns:component_type"
+    			maxOccurs="1" minOccurs="1">
+    		</element>
+    		<element name="memory" type="tns:memory_type"
+    			maxOccurs="unbounded" minOccurs="0">
+    		</element>
+    		<element name="microbenchmark"
+    			type="tns:microbenchmark_type" maxOccurs="unbounded"
+    			minOccurs="0">
+    		</element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="memory_type">
+    	<attribute name="name" type="string"></attribute>
+    	<attribute name="type" type="string"></attribute>
+    	<attribute name="size" type="string"></attribute>
+    	<attribute name="unit" type="string"></attribute>
+    	<attribute name="static_power" type="string"></attribute>
+    	<attribute name="static_power_unit" type="string"></attribute>
+    	<attribute name="bandwith" type="string"></attribute>
+    </complexType>
+
+    <complexType name="cache_type">
+    	<attribute name="name" type="string"></attribute>
+    	<attribute name="size" type="string"></attribute>
+    	<attribute name="unit" type="string"></attribute>
+    	<attribute name="sets" type="string"></attribute>
+    	<attribute name="replacement" type="string"></attribute>
+    	<attribute name="write_policy" type="string"></attribute>
+    </complexType>
+
+    <complexType name="component_type">
+    	<attribute name="type" type="string"></attribute>
+    </complexType>
+
+
+    <complexType name="microbenchmark_type">
+    	<attribute name="target" type="string"></attribute>
+    	<attribute name="path" type="string"></attribute>
+    	<attribute name="file" type="string"></attribute>
+    </complexType>
+</schema>

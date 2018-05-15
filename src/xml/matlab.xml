@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xpdl:model xmlns:xpdl="http://www.xpdl.com/xpdl_software" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xpdl.com/xpdl_software xpdl_software.xsd ">
+  <xpdl:component type="software" />
+	<xpdl:software name="matlab"
+		path="../src/matlab_test_path" version="7.0.2"></xpdl:software>
+</xpdl:model>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.xpdl.com/xpdl_software" xmlns:tns="http://www.xpdl.com/xpdl_software" elementFormDefault="qualified">
+
+    <element name="model" type="tns:model_type"></element>
+    
+    <complexType name="model_type">
+    	<sequence>
+    		<element name="component" type="tns:component_type"
+    			maxOccurs="1" minOccurs="1">
+    		</element>
+    		<element name="os" type="tns:software_type" maxOccurs="unbounded" minOccurs="0"></element>
+    		<element name="library" type="tns:software_type" maxOccurs="unbounded" minOccurs="0"></element>
+    		<element name="software" type="tns:software_type" maxOccurs="unbounded" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="component_type">
+    	<attribute name="type" type="string"></attribute>
+    </complexType>
+
+    <complexType name="libraary"></complexType>
+
+    <complexType name="library"></complexType>
+
+    <complexType name="library_type"></complexType>
+
+    <complexType name="software"></complexType>
+
+    <complexType name="software_type">
+    	<sequence></sequence>
+    	<attribute name="type" type="string"></attribute>
+    	<attribute name="path" type="string"></attribute>
+    	<attribute name="version" type="string"></attribute>
+    	<attribute name="name" type="string"></attribute>
+    </complexType>
+</schema>

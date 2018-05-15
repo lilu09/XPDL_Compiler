@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xpdl:model xmlns:xpdl="http://www.xpdl.com/xpdl_gpu" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xpdl.com/xpdl_gpu xpdl_gpu.xsd ">
+  <xpdl:component type="gpu" ></xpdl:component>
+  <xpdl:gpu compiler="nvcc" programming_model="cuda" name="nvidia_gpu" />
+</xpdl:model>

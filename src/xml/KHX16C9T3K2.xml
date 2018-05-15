@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xpdl:model xmlns:xpdl="http://www.xpdl.com/xpdl_memory" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xpdl.com/xpdl_memory xpdl_memory.xsd ">
+  <xpdl:component type="memory" /><xpdl:memory name="KHX16C9T3K2" static_power="2.460"
+  	static_power_unit="W" />
+</xpdl:model>
