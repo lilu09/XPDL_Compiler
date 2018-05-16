@@ -33,4 +33,4 @@ allclean:
 	-@rm -rf *.o ../bin ./xpdl.hpp
 
 run:
-	xpdl_compiler ../example/system.xml && vim xpdl.hpp 
+	../bin/xpdl_compiler ../example/system.xml && vim xpdl.hpp 
