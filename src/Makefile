@@ -2,7 +2,7 @@
 
 
 #Please change to your xercesc installation directory
-XERCESC_HOME:=/home/lu/Documents/Software/10.XPDL/xercesc
+XERCESC_HOME:=/home/lu/Documents/Xerces/install
 
 CC=g++
 CFLAGS=-std=c++11
