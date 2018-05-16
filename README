@@ -24,7 +24,7 @@ Installation:
 
 3. add the following line to .bashrc with XPDL_HOME set to be the root folder of XPDL software
 
-	export XPDL_HOME=/home/lu/Documents/Software/10.XPDL/xpdl_project
+	export XPDL_HOME=YOUR_XPDL_PATH
 	export PATH=$XPDL_HOME/bin:$PATH
 
 4. go to src/
