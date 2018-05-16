@@ -17,7 +17,7 @@ Important notice:
 
 Installation:
 
-1. Install xerces 
+1. Install xerces (tested on 3.2.1)
 	https://xerces.apache.org/xerces-c/
 
 2. add YOUR_XERCES_DIRECTORY/lib to LD_LIBRARY_PATH
